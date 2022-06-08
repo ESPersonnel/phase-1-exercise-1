@@ -49,3 +49,20 @@ console.log(book.author);
 book.title = 'You don\'t know JS'
 book['author'] = 'George RR Martin'
 console.log(book);
+
+// More Array Methods
+const planets = ['mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune']
+planets[4] = 'pluto'
+console.log(planets);
+planets.push('pluto')
+console.log(planets);
+planets.pop()
+console.log(planets);
+planets.shift()
+console.log(planets);
+planets.unshift('pluto')
+console.log(planets);
+planets[4] = 'jupiter'
+console.log(planets);
+planets.splice(4, 1, 'saturn')
+console.log(planets);
