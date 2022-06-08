@@ -66,3 +66,11 @@ planets[4] = 'jupiter'
 console.log(planets);
 planets.splice(4, 1, 'saturn')
 console.log(planets);
+planets.shift()
+console.log(planets);
+planets.unshift('mercury')
+console.log(planets);
+planets[4] = 'jupiter';
+console.log(planets);
+planets.push('pluto');
+console.log(planets);
