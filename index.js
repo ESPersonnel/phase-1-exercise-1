@@ -24,3 +24,17 @@ function iInvokeThings (thing) {
 
 iInvokeThings(function (){return 4+5})
 iInvokeThings(function(){return 'Hello, ' + 'world!'})
+
+let letters = ['a', 'b', 'c', 'd', 'e']
+console.log(letters[0]);
+console.log(letters[1]);
+console.log(letters[2]);
+
+let book = {
+    title: 'Eloquent Javascript',
+    author: 'Kyle Simpson',
+    publisher: 'O\'Reilly'
+}
+
+console.log(book.title);
+console.log(book.author);
