@@ -155,3 +155,36 @@ let artists2 = [
 ]
 // searching for the first artist with names containing the letter "T"
 let firstArtistWithT = artists2.find(artist => artist.startsWith("T"))
+
+const string = "Hello World";
+string.toUpperCase();
+console.log(string.toUpperCase());
+console.log(string);
+
+// Examples of slice and splice
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+console.log(numbers.slice(0, 3));
+console.log(numbers.slice(3, 6));
+
+console.log(numbers.splice(3, 6)); // removes from 3 to 6
+console.log(numbers); 
+
+// Another example using slice and spread
+
+const menu = [
+    'pizza',
+    'pasta',
+    'salad',
+    'bread',
+    'soup',
+    'dessert'
+]
+
+const newMenu = [...menu.slice(0, 3), 'burger', ...menu.slice(3)]
+// slice(0, 3) returns an array of the first 3 elements
+// 'burger' is added to the end of the array
+// ...menu.slice(3) returns an array of the remaining elements
+console.log(newMenu);
+
+
+// That's enough for this file.
