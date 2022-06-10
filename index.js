@@ -54,23 +54,104 @@ console.log(book);
 const planets = ['mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune']
 planets[4] = 'pluto'
 console.log(planets);
-planets.push('pluto')
+planets.push('pluto') // add to end
 console.log(planets);
-planets.pop()
+planets.pop() // remove from end
 console.log(planets);
-planets.shift()
+planets.shift() // remove from beginning
 console.log(planets);
-planets.unshift('pluto')
+planets.unshift('pluto') // add to beginning
 console.log(planets);
-planets[4] = 'jupiter'
+planets[4] = 'jupiter' // replace
 console.log(planets);
-planets.splice(4, 1, 'saturn')
+planets.splice(4, 1, 'saturn') // replace
 console.log(planets);
-planets.shift()
+planets.shift()     // remove from beginning
 console.log(planets);
-planets.unshift('mercury')
+planets.unshift('mercury')  // add to beginning
 console.log(planets);
-planets[4] = 'jupiter';
+planets[4] = 'jupiter'; // replace
 console.log(planets);
-planets.push('pluto');
+planets.push('pluto'); // add to end
 console.log(planets);
+// spread, denoted by three dots
+// can be safely used to clone non-nested arrays
+const newPlanets = [...planets]
+console.log(newPlanets);
+
+// Nested Arrays
+const nestedArray = [
+    ['a', 'b', 'c'],
+    [1, 2, 3],
+    ['I', 'II', 'III', ['IV', 'V', 'VI']]
+]
+console.log(nestedArray[0][1]);
+console.log(nestedArray[2][3][1]);
+
+let globalVariable= 'global';
+// let variable = 'global scope';
+
+function functionalScope(){
+    let variable = 'functional scope';
+    // Block scope
+    if(true){
+        let variable = 'block scope';
+        console.log(variable);
+    }
+    console.log(variable);
+}
+
+
+const address = {
+    name: "P. Sherman",
+    street2: "42 Wallaby Way"
+};
+
+// We use console.log(key) to access the value of the key.
+
+for (const key in  address) {
+    console.log(key);
+}
+
+const artistInfo = {
+    name: 'Daft Punk',
+    age: 'unknown',
+    genre: 'electronic',
+    albums: [
+        {
+            title: 'Random Access Memories',
+            year: '1994'
+        },
+        {
+            title: 'Human After All',
+            year: '1997'
+        },
+        {
+            title: 'Discovery',
+            year: '2002'
+        }]
+}
+console.log(artistInfo.albums[1].title);
+console.log(artistInfo.genre);
+
+let artists = [
+    "Daft Punk",
+    "The Beatles",
+    "Led Zeppelin",
+    "Pink Floyd",
+    "The Rolling Stones",
+]
+// searching for artists with names containing the letter "t"
+let artistsWithT = artists.filter(artist => artist.startsWith("T"))
+// We use .filter to create a new array of artists with names containing the letter "t"
+console.log(artistsWithT);
+
+let artists2 = [
+    "Daft Punk",
+    "The Beatles",
+    "Led Zeppelin",
+    "Pink Floyd",
+    "The Rolling Stones",
+]
+// searching for the first artist with names containing the letter "T"
+let firstArtistWithT = artists2.find(artist => artist.startsWith("T"))
